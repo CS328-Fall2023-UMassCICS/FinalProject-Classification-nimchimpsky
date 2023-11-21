@@ -9,18 +9,17 @@ Data for this project was collected using the Sensor Logger App, which records a
 ### Planned Preprocessing
 
 #### Data Cleaning
-
-Raw sensor data often contains noise and irregularities. To ensure quality, the collected data underwent cleaning processes to remove outliers and erroneous readings.
+There exists a lot of erraneous data, that can be considered a mis-prediction when collecting data for testing, such that the usage of a filter of some kind may be necessary(due to lots of hand-swinging).
 
 #### Data Smoothing
 
-High-pass filters were applied to the data to smooth out noise and eliminate low-frequency components while preserving the essential swing-related movements captured by the sensors.
+Potentially eliminate low-frequency components while preserving the essential swing-related movements captured by the sensors.(Hypothesized)
 
-### Future Improvements
+### Future Improvements (beyond simple classification)
 
 - Exploring advanced signal processing techniques to extract more nuanced swing features.
-- Experimenting with different machine learning algorithms to potentially improve classification accuracy.
 - Collecting additional labeled data to further enrich the dataset and improve model generalization.
+- Adding statistics to maybe guage how properly one's technique is, allowing for better practice
 
 ### Usage
 
@@ -29,9 +28,6 @@ To utilize this classification model:
 1. **Data Collection:** Use the Sensor Logger App to collect accelerometer and gyroscope data during tennis racket swings.
 2. **Data Preprocessing:** Apply necessary cleaning and filtering techniques to the raw data.
 3. **Feature Extraction:** Extract relevant features from the preprocessed data.
-4. **Model Training:** Utilize the provided codebase to train the Random Forest classifier on your extracted features.
-5. **Prediction:** Deploy the trained model to classify new instances of tennis racket swings based on sensor data.
+4. **Model Training:** Utilize the collected codebase to train a Random Forest classifier on extracted features.
+5. **Prediction:** Deploy the trained model to classify new instances of tennis racket swings based on sensor data, in realtime hopefully.
 
-### Acknowledgments
-
-This project may have been made possible with the use of all traditional Python data processing libraries or any other resources used.
